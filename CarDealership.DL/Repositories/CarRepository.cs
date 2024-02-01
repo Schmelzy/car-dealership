@@ -33,7 +33,7 @@ namespace CarDealership.DL.Repositories
 
         public List<Car> GetAllCarsByManufacturer(int manufacturerId)
         {
-            throw new NotImplementedException();
+            return InMemoryDB.CarData.Where(c => c.ManufacturerId == manufacturerId).ToList();
         }
 
         public Car GetById(int id)

@@ -17,6 +17,6 @@ namespace CarDealership.DL.Interfaces
 
         void Delete(int id);
 
-        List <Car> GetAllCarsByManufacturer(int manufacturerId);
+        List<Car> GetAllCarsByManufacturer(int manufacturerId);
     }
 }
