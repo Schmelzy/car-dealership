@@ -3,7 +3,7 @@ using CarDealership.BL.Services;
 using CarDealership.DL.Interfaces;
 using CarDealership.DL.Repositories;
 
-namespace BookStore
+namespace CarDealership
 {
     public class Program
     {
@@ -17,7 +17,8 @@ namespace BookStore
             builder.Services.AddSingleton<ICarService, CarService>();
             builder.Services.AddSingleton<IManufacturerRepository, ManufacturerRepository>();
             builder.Services.AddSingleton<IManufacturerService, ManufacturerService>();
-
+            builder.Services.AddSingleton<ICarStoreService, CarStoreService>();
+            
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
