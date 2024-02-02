@@ -4,6 +4,7 @@ using CarDealership.DL.Interfaces;
 using CarDealership.DL.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using CarDealership.HealthChecks;
 
 
 namespace CarDealership
@@ -29,6 +30,8 @@ namespace CarDealership
 
             builder.Services.AddFluentValidationAutoValidation();
             builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
+            builder.Services.AddHealthChecks().AddCheck<CustomHealthCheck>(nameof(CustomHealthCheck));
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -41,6 +44,8 @@ namespace CarDealership
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            app.MapHealthChecks("/healthz");
 
             app.MapControllers();
 
