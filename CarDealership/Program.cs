@@ -2,6 +2,9 @@ using CarDealership.BL.Interfaces;
 using CarDealership.BL.Services;
 using CarDealership.DL.Interfaces;
 using CarDealership.DL.Repositories;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+
 
 namespace CarDealership
 {
@@ -24,6 +27,8 @@ namespace CarDealership
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddFluentValidationAutoValidation();
+            builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

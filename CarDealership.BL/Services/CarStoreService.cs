@@ -20,7 +20,7 @@ namespace CarDealership.BL.Services
             _carService = carService;
         }
 
-        public int GetAllCarsByCount(int inputCount)
+        public int GetAllCarsCount(int inputCount)
         {
             var carsCount = _carService.GetAll();
             return carsCount.Count + inputCount;

@@ -13,6 +13,6 @@ namespace CarDealership.BL.Interfaces
         public GetAllCarsByManufacturerResponse
             GetAllCarsByManufacturer(GetAllCarsByManufacturerRequest request);
 
-            int GetAllCarsByCount(int inputCount);
-            }
+        int GetAllCarsCount(int inputCount);
+    }
 }
