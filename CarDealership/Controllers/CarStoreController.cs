@@ -23,6 +23,13 @@ namespace CarDealership.Controllers
             return _carStoreService.GetAllCarsByManufacturer(request);
         }
 
+        [HttpPost("GetAllCarsCount")]
+
+        public int GetAllCarsCount(int inputCount)
+        {
+            return _carStoreService.GetAllCarsCount(inputCount);
+        }
+
         [HttpPost("TestEndPoint")]
         public string TestEndPoint([FromBody] TestRequest request)
         {
