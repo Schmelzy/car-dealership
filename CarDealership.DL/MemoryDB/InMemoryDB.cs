@@ -14,7 +14,7 @@ namespace CarDealership.DL.MemoryDB
             new Manufacturer()
             {
                 Id = 1,
-                Name = "Audi"
+                Name = "Porsche"
             },
             new Manufacturer()
             {
@@ -29,7 +29,7 @@ namespace CarDealership.DL.MemoryDB
             new Manufacturer()
             {
                 Id = 4,
-                Name = "Porsche"
+                Name = "Audi"
             },
         };
 
@@ -37,7 +37,7 @@ namespace CarDealership.DL.MemoryDB
         {
             new Car()
             {
-                Id = 01,
+                Id = 101,
                 Model = "C63 W204",
                 Type = "Sedan",
                 EngineType = "Petrol",
@@ -47,27 +47,27 @@ namespace CarDealership.DL.MemoryDB
 
             new Car()
             {
-                Id = 02,
+                Id = 102,
                 Model = "RS6 C8",
                 Type = "Avant",
                 EngineType = "Petrol",
                 Horsepower = 630,
-                ManufacturerId = 1
-            },
-
-            new Car()
-            {
-                Id = 03,
-                Model = "911 GT3 RS",
-                Type = "Coupe",
-                EngineType = "Petrol",
-                Horsepower = 525,
                 ManufacturerId = 4
             },
 
             new Car()
             {
-                Id = 04,
+                Id = 103,
+                Model = "911 GT3 RS",
+                Type = "Coupe",
+                EngineType = "Petrol",
+                Horsepower = 525,
+                ManufacturerId = 1
+            },
+
+            new Car()
+            {
+                Id = 104,
                 Model = "i7 M70 xDrive G70 BEV",
                 Type = "Sedan",
                 EngineType = "Electric",
@@ -77,12 +77,42 @@ namespace CarDealership.DL.MemoryDB
 
             new Car()
             {
-                Id = 05,
+                Id = 105,
                 Model = "Q8",
                 Type = "SUV",
                 EngineType = "Diesel",
                 Horsepower = 286,
-                ManufacturerId = 1
+                ManufacturerId = 4
+            },
+
+             new Car()
+            {
+                Id = 106,
+                Model = "M5 CS",
+                Type = "Sedan",
+                EngineType = "Petrol",
+                Horsepower = 627,
+                ManufacturerId = 3
+            },
+
+              new Car()
+            {
+                Id = 107,
+                Model = "R8 V10",
+                Type = "Coupe",
+                EngineType = "Petrol",
+                Horsepower = 620,
+                ManufacturerId = 4
+            },
+
+               new Car()
+            {
+                Id = 108,
+                Model = "E220d W213",
+                Type = "Cabriolet",
+                EngineType = "Diesel",
+                Horsepower = 194,
+                ManufacturerId = 2
             },
         };
     }
